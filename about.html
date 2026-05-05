@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="3대를 이어온 농업의 정직함. 다움(1988)에서 시작해 대학두유를 거쳐, 오늘 AVO로.">
+<title>About · AVO 올비탈오가닉스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a1a;
+  --ink-2: #3a3a3a;
+  --muted: #6e6e6e;
+  --muted-2: #9a9a9a;
+  --line: #e2e0d8;
+  --line-2: #d0cdc2;
+  --bg: #faf9f5;
+  --bg-2: #f1efe6;
+  --bg-card: #ffffff;
+  --avo: #346539;
+  --avo-2: #2a5530;
+  --sage: #b9d2bd;
+  --sage-bg: #e7efe8;
+  --serif: 'DM Serif Display', 'Noto Serif KR', serif;
+  --sans: 'Inter', 'Pretendard', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--avo); text-decoration: none; }
+a:hover { color: var(--avo-2); }
+
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250,249,245,.92);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 28px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.nav-brand {
+  font-family: var(--serif); font-size: 22px; letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.nav-links { display: flex; gap: 22px; align-items: center; font-size: 13px; }
+.nav-links a { color: var(--ink-2); }
+.nav-cta {
+  background: var(--avo); color: #fff !important; padding: 8px 16px;
+  border-radius: 6px; font-weight: 500; letter-spacing: 0.02em;
+  transition: background .15s;
+}
+.nav-cta:hover { background: var(--avo-2); }
+
+.hero-about {
+  padding: 120px 28px 80px;
+  background: linear-gradient(180deg, var(--sage-bg) 0%, var(--bg) 100%);
+  text-align: center;
+}
+.hero-about-inner { max-width: 760px; margin: 0 auto; }
+.eyebrow {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--avo); font-weight: 600; margin-bottom: 22px;
+  display: block;
+}
+.hero-about h1 {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5.5vw, 60px);
+  font-weight: 400; line-height: 1.15; letter-spacing: -0.01em;
+  margin: 0 0 22px;
+  color: var(--ink);
+}
+.hero-about-sub {
+  font-size: 18px; color: var(--ink-2); font-weight: 300;
+  max-width: 600px; margin: 0 auto;
+  line-height: 1.65;
+}
+
+section { padding: 80px 28px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+.wrap-wide { max-width: 1100px; margin: 0 auto; }
+
+h2.section-h {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 400; line-height: 1.2;
+  letter-spacing: -0.01em; margin: 0 0 24px;
+  color: var(--ink);
+}
+.lead {
+  font-size: 18px; color: var(--ink-2); font-weight: 300; line-height: 1.7;
+  margin: 0 0 24px;
+}
+.body-text { font-size: 15.5px; color: var(--ink-2); line-height: 1.85; margin: 0 0 18px; }
+.body-text strong { color: var(--ink); font-weight: 500; }
+
+/* Lineage timeline */
+.lineage {
+  background: var(--bg-2);
+  padding: 96px 28px;
+}
+.lineage-grid {
+  max-width: 880px; margin: 36px auto 0;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+  position: relative;
+}
+.lineage-grid::before {
+  content: ""; position: absolute;
+  left: 12%; right: 12%; top: 38px; height: 1px;
+  background: var(--avo); opacity: .25;
+}
+.lineage-item {
+  text-align: center; padding: 0 14px; position: relative;
+}
+.lineage-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--avo); margin: 30px auto 18px;
+  position: relative; z-index: 2;
+  box-shadow: 0 0 0 6px var(--bg-2);
+}
+.lineage-year {
+  font-family: var(--serif); font-size: 24px;
+  color: var(--avo); margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+.lineage-name {
+  font-size: 14px; font-weight: 500; color: var(--ink);
+  margin-bottom: 8px;
+}
+.lineage-desc {
+  font-size: 13px; color: var(--muted); line-height: 1.6;
+}
+@media (max-width: 720px) {
+  .lineage-grid { grid-template-columns: 1fr; gap: 32px; }
+  .lineage-grid::before { display: none; }
+}
+
+/* Stance section */
+.stance {
+  background: var(--avo);
+  color: #fff;
+  text-align: center;
+}
+.stance h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0 0 28px; font-weight: 400; color: #fff;
+  letter-spacing: -0.01em;
+}
+.stance-quote {
+  font-size: 19px; line-height: 1.65;
+  color: rgba(255,255,255,.88); font-weight: 300;
+  max-width: 640px; margin: 0 auto 28px;
+}
+.stance-values {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,.6);
+}
+.stance-values span::after { content: "·"; margin-left: 16px; }
+.stance-values span:last-child::after { display: none; }
+
+/* CTA strip */
+.cta-strip {
+  background: var(--bg);
+  padding: 80px 28px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+.cta-strip h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 4vw, 38px); font-weight: 400;
+  margin: 0 0 14px; color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.cta-strip p { font-size: 15px; color: var(--ink-2); margin: 0 0 28px; font-weight: 300; }
+.btn-primary {
+  display: inline-block; background: var(--avo); color: #fff !important;
+  padding: 13px 28px; border-radius: 6px; font-weight: 500;
+  font-size: 14px; letter-spacing: 0.02em;
+  transition: background .15s;
+}
+.btn-primary:hover { background: var(--avo-2); }
+
+/* Footer (copy from index) */
+.foot {
+  background: #1a1a1a;
+  color: rgba(255,255,255,.6);
+  padding: 60px 28px 36px;
+  font-size: 12px; line-height: 1.7;
+}
+.foot-inner { max-width: 1100px; margin: 0 auto; }
+.foot-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.foot-brand { font-family: var(--serif); font-size: 22px; color: #fff; margin-bottom: 8px; }
+.foot-tag { font-size: 12px; color: rgba(255,255,255,.5); font-style: italic; }
+.foot h5 {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em;
+  color: rgba(255,255,255,.7); margin: 0 0 14px; font-weight: 600;
+}
+.foot ul { list-style: none; margin: 0; padding: 0; }
+.foot ul li { margin-bottom: 6px; }
+.foot a { color: rgba(255,255,255,.6); border-bottom: none; }
+.foot a:hover { color: #fff; }
+.foot-legal {
+  padding-top: 32px;
+  display: grid; grid-template-columns: 2fr 1fr; gap: 32px;
+}
+.foot-business { font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.8; }
+.foot-business strong { color: rgba(255,255,255,.65); font-weight: 500; }
+.foot-disclaimer {
+  font-size: 10.5px; color: rgba(255,255,255,.4); line-height: 1.65;
+  padding-top: 16px;
+}
+.foot-copy {
+  margin-top: 28px; padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  font-size: 11px; color: rgba(255,255,255,.4);
+}
+@media (max-width: 720px) {
+  .foot-top { grid-template-columns: 1fr; gap: 28px; }
+  .foot-legal { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">AVO</a>
+    <div class="nav-links">
+      <a href="/about.html">About</a>
+      <a href="https://smartstore.naver.com/allvitalorganics" target="_blank" rel="noopener" class="nav-cta">구매하기</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-about">
+  <div class="hero-about-inner">
+    <span class="eyebrow">About AVO</span>
+    <h1>Farm to body,<br/>Since 1988.</h1>
+    <p class="hero-about-sub">3대에 걸쳐 이어진 농업의 정직함.<br/>다움에서 시작해, 대학두유를 거쳐, 오늘의 AVO로.</p>
+  </div>
+</section>
+
+<!-- Story / Why we exist -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">우리가 만드는 이유</span>
+    <h2 class="section-h">매일 채소를 충분히 먹는다는 것은 쉽지 않은 일입니다.</h2>
+    <p class="body-text">바쁜 아침, 가공식품에 둘러싸인 일상, 신선한 식물성 식재료를 챙기기 어려운 시간들. AVO는 이 모든 것을 인정하는 데서 시작했습니다.</p>
+    <p class="body-text">우리가 만든 것은 보충제가 아닙니다. 합성 분말도, 기능성 식품도 아닙니다. <strong>가공하지 않은 진짜 식재료를, 모두가 일상에서 챙길 수 있는 형태로 옮겨놓은 것</strong>입니다.</p>
+    <p class="body-text">그게 다입니다. 그게 전부입니다.</p>
+  </div>
+</section>
+
+<!-- Lineage -->
+<section class="lineage">
+  <div class="wrap-wide" style="text-align:center;">
+    <span class="eyebrow">3대를 이어온 농업</span>
+    <h2 class="section-h">우리의 뿌리는 농가에 있습니다.</h2>
+    <p class="lead" style="max-width: 600px; margin: 0 auto 24px;">AVO의 이야기는 1988년 다움에서 시작했습니다. 38년이 지난 지금, 같은 정직함이 AVO 샐러두유 한 봉지에 담겨 있습니다.</p>
+
+    <div class="lineage-grid">
+      <div class="lineage-item">
+        <div class="lineage-dot"></div>
+        <div class="lineage-year">1988</div>
+        <div class="lineage-name">다움 (Daoom)</div>
+        <div class="lineage-desc">국내 최초의 생식 브랜드. 자연식과 식품의 정직성에 대한 고민이 시작된 곳.</div>
+      </div>
+      <div class="lineage-item">
+        <div class="lineage-dot"></div>
+        <div class="lineage-year">2008</div>
+        <div class="lineage-name">대학두유</div>
+        <div class="lineage-desc">서울대학교 평창 캠퍼스 내 제조 시설을 기반으로, 농가와 직접 일하는 두유 제조 브랜드.</div>
+      </div>
+      <div class="lineage-item">
+        <div class="lineage-dot"></div>
+        <div class="lineage-year">2026</div>
+        <div class="lineage-name">AVO</div>
+        <div class="lineage-desc">3대째. 새로운 세대가 같은 농업의 정직함 위에 만드는 식품 브랜드.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Manufacturing -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">제조</span>
+    <h2 class="section-h">강원도 평창에서 만들어집니다.</h2>
+    <p class="body-text">AVO 샐러두유는 서울대학교 평창 캠퍼스 내에 위치한 <strong>대학두유</strong> 시설에서 제조됩니다. 동물복지 인증 농장에서 직접 들여온 콩이 24시간 이내 살균을 거쳐 한 봉지에 담깁니다.</p>
+    <p class="body-text">HACCP 인증, 유기농 인증, 동물복지 인증 — 세 가지 모두 받았습니다. 인증은 광고 문구가 아닙니다. 우리가 매일 따르고 있는 기준입니다.</p>
+    <p class="body-text">한 봉지에 들어가는 18가지 재료 중 단 한 가지가 부족해도, 그 봉지는 출고되지 않습니다.</p>
+  </div>
+</section>
+
+<!-- Stance -->
+<section class="stance">
+  <div class="wrap-wide">
+    <h2>신뢰는 정직함 위에서 만들어집니다.<br/>최적화 위에서가 아닙니다.</h2>
+    <p class="stance-quote">우리가 더 빠르거나, 더 저렴하거나, 더 화려한 브랜드는 아닙니다. 우리가 다른 점은 한 가지입니다 — 우리가 약속한 것만 이야기합니다. 그리고 약속한 것은 빠짐없이 지킵니다.</p>
+    <div class="stance-values">
+      <span>Grounded</span>
+      <span>Honest</span>
+      <span>Transparent</span>
+      <span>Robust</span>
+      <span>Restrained</span>
+      <span>Fresh</span>
+    </div>
+  </div>
+</section>
+
+<!-- Family -->
+<section style="background: var(--bg-2);">
+  <div class="wrap">
+    <span class="eyebrow">A family business</span>
+    <h2 class="section-h">한 가족이, 다음 세대에도.</h2>
+    <p class="body-text">AVO는 <strong>가족 사업의 다음 장</strong>입니다. 1988년 다움을 시작한 1세대, 대학두유 제조 시설을 운영하는 2세대, 그리고 그 위에 AVO를 올리는 3세대 — 형제가 함께 만들어 갑니다.</p>
+    <p class="body-text">우리는 38년의 농업 정직함을 마케팅 카피로 쓰지 않습니다. 그것은 우리 가족의 실제 역사이고, 우리가 매일 배우는 기준입니다.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <h2>오늘부터, 진짜 채소 한 봉지.</h2>
+  <p>네이버 스마트스토어에서 만나보실 수 있습니다.</p>
+  <a href="https://smartstore.naver.com/allvitalorganics" target="_blank" rel="noopener" class="btn-primary">스마트스토어로 이동</a>
+</section>
+
+<!-- Footer -->
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">AVO</div>
+        <p class="foot-tag">All Vital Organics · Farm to body, Since 1988.</p>
+        <p style="margin-top:14px; max-width:340px;">3대를 이어온 농업의 정직함 위에 만든, 진짜 식재료 기반 제품을 만듭니다.</p>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="https://smartstore.naver.com/allvitalorganics" target="_blank" rel="noopener">Naver Smart Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/terms.html">이용약관</a></li>
+          <li><a href="/privacy.html">개인정보처리방침</a></li>
+          <li><a href="/refund.html">환불·반품</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-legal">
+      <div class="foot-business">
+        <strong>판매원</strong> 재니스바스켓<br/>
+        <strong>대표자</strong> [TBD]<br/>
+        <strong>사업자등록번호</strong> [TBD]<br/>
+        <strong>통신판매업신고번호</strong> [TBD]<br/>
+        <strong>사업장 주소</strong> [TBD]<br/>
+        <strong>고객문의</strong> hello@allvitalorganics.co · [TBD 전화번호]<br/>
+        <strong>제조원</strong> 대학두유 (강원도 평창군)
+      </div>
+      <div class="foot-disclaimer">
+        <p style="margin: 0 0 10px;"><strong style="color:rgba(255,255,255,.65);">본 제품은 일반식품입니다.</strong></p>
+        <p style="margin: 0 0 10px;">본 제품은 식품의약품안전처(MFDS)에서 기능성을 인정받은 건강기능식품이 아니며, 특정 질병의 예방·치료·진단을 목적으로 하지 않습니다.</p>
+        <p style="margin: 0 0 10px;">알레르기 유발성분: 대두 함유. 본 제품은 밀, 견과류 등을 함께 사용하는 시설에서 제조됩니다.</p>
+        <p style="margin: 0; font-size: 9.5px; color: rgba(255,255,255,.32);">This product is a general food, not intended to diagnose, treat, cure, or prevent any disease. Currently sold only within the Republic of Korea.</p>
+      </div>
+    </div>
+
+    <div class="foot-copy">
+      <span>© 2026 재니스바스켓 / All Vital Organics. All rights reserved.</span>
+      <span>Made in Korea · 강원도 평창</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
