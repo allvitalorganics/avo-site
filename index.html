@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AVO 샐러두유 와일드 그린즈 — 18종 유기농 채소를 한 봉지에. 1988년부터 농업의 정직함 위에.">
-<title>AVO · 올비탈오가닉스</title>
+<meta name="description" content="AVO · 농업의 정직함 위에 만드는 진짜 식품. 1988년부터 3대를 이어온 가족 사업.">
+<title>AVO · All Vital Organics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,12 +13,9 @@
   --ink: #1a1a1a;
   --ink-2: #3a3a3a;
   --muted: #6e6e6e;
-  --muted-2: #9a9a9a;
   --line: #e2e0d8;
-  --line-2: #d0cdc2;
   --bg: #faf9f5;
   --bg-2: #f1efe6;
-  --bg-card: #ffffff;
   --avo: #346539;
   --avo-2: #2a5530;
   --sage: #b9d2bd;
@@ -35,11 +32,9 @@ body {
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 a { color: var(--avo); text-decoration: none; }
 a:hover { color: var(--avo-2); }
-img { max-width: 100%; display: block; }
 
 /* ===== Nav ===== */
 .nav {
@@ -48,228 +43,249 @@ img { max-width: 100%; display: block; }
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--line);
-  padding: 14px 0;
+  padding: 16px 0;
 }
 .nav-inner {
-  max-width: 1100px; margin: 0 auto; padding: 0 28px;
-  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  max-width: 1200px; margin: 0 auto; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
 }
 .nav-brand {
-  font-family: var(--serif); font-size: 22px; letter-spacing: 0.04em;
+  font-family: var(--serif);
+  font-size: 24px; letter-spacing: 0.06em;
   color: var(--ink);
 }
-.nav-links { display: flex; gap: 22px; align-items: center; font-size: 13px; }
+.nav-links { display: flex; gap: 24px; align-items: center; font-size: 13px; }
 .nav-links a { color: var(--ink-2); }
 .nav-cta {
-  background: var(--avo); color: #fff !important; padding: 8px 16px;
-  border-radius: 6px; font-weight: 500; letter-spacing: 0.02em;
+  background: var(--avo); color: #fff !important;
+  padding: 9px 18px; border-radius: 4px;
+  font-weight: 500; letter-spacing: 0.02em;
   transition: background .15s;
 }
 .nav-cta:hover { background: var(--avo-2); }
 
-/* ===== Hero ===== */
+/* ===== Hero — brand-forward ===== */
 .hero {
-  min-height: 88vh;
+  min-height: 92vh;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; padding: 80px 28px;
-  background: linear-gradient(180deg, var(--sage-bg) 0%, var(--bg) 80%);
-  position: relative;
+  text-align: center; padding: 100px 32px 80px;
+  background: linear-gradient(180deg, var(--sage-bg) 0%, var(--bg) 100%);
 }
-.hero-inner { max-width: 760px; }
 .hero-eyebrow {
-  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--avo); font-weight: 600; margin-bottom: 24px;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--avo); font-weight: 600; margin-bottom: 36px;
 }
 .hero h1 {
   font-family: var(--serif);
-  font-size: clamp(38px, 6vw, 64px);
-  font-weight: 400; line-height: 1.1; letter-spacing: -0.01em;
-  margin: 0 0 22px;
+  font-size: clamp(56px, 9vw, 112px);
+  font-weight: 400; line-height: 1; letter-spacing: -0.02em;
+  margin: 0 0 32px;
   color: var(--ink);
+  max-width: 1100px;
 }
+.hero h1 .accent { color: var(--avo); font-style: italic; }
 .hero-sub {
   font-size: clamp(16px, 2vw, 19px);
   color: var(--ink-2); font-weight: 300;
-  max-width: 560px; margin: 0 auto 36px;
-  line-height: 1.55;
+  max-width: 560px; margin: 0 auto 44px;
+  line-height: 1.6;
 }
-.hero-cta-wrap { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn-primary, .btn-secondary {
-  display: inline-block; font-size: 14px; padding: 13px 26px;
-  border-radius: 6px; font-weight: 500; letter-spacing: 0.02em;
-  transition: all .15s;
-}
+.hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-primary {
-  background: var(--avo); color: #fff !important; border: 1px solid var(--avo);
+  display: inline-block; background: var(--avo); color: #fff !important;
+  border: 1px solid var(--avo); padding: 14px 30px;
+  border-radius: 4px; font-weight: 500; font-size: 14px;
+  letter-spacing: 0.02em; transition: all .15s;
 }
-.btn-primary:hover { background: var(--avo-2); border-color: var(--avo-2); }
+.btn-primary:hover { background: var(--avo-2); }
 .btn-secondary {
-  background: transparent; color: var(--avo) !important;
-  border: 1px solid var(--avo);
+  display: inline-block; background: transparent; color: var(--avo) !important;
+  border: 1px solid var(--avo); padding: 14px 30px;
+  border-radius: 4px; font-weight: 500; font-size: 14px;
+  letter-spacing: 0.02em; transition: all .15s;
 }
 .btn-secondary:hover { background: var(--sage-bg); }
 
-/* ===== Sections ===== */
-section { padding: 96px 28px; }
-.wrap { max-width: 1100px; margin: 0 auto; }
-.wrap-narrow { max-width: 760px; margin: 0 auto; }
-.section-eyebrow {
-  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--avo); font-weight: 600; margin-bottom: 12px;
-  display: block;
-}
-.section-title {
-  font-family: var(--serif);
-  font-size: clamp(28px, 4vw, 42px); font-weight: 400; line-height: 1.18;
-  letter-spacing: -0.01em; margin: 0 0 16px;
-  color: var(--ink);
-}
-.section-sub {
-  font-size: 17px; color: var(--ink-2); font-weight: 300;
-  line-height: 1.65; margin: 0 0 36px;
-  max-width: 600px;
-}
-
-/* ===== Numbers grid ===== */
-.numbers {
-  background: var(--bg-2);
-  padding: 80px 28px;
+/* ===== Product strip — alongside the brand ===== */
+.product-strip {
+  background: #fff;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.numbers-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
-  max-width: 1100px; margin: 0 auto;
+.product-strip-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 80px 32px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: center;
 }
-.number-item { text-align: center; padding: 0 16px; }
-.number-value {
+.product-name-block {
+  border-left: 2px solid var(--avo);
+  padding-left: 28px;
+}
+.product-line {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--avo); font-weight: 600; margin-bottom: 14px;
+}
+.product-name {
   font-family: var(--serif);
-  font-size: clamp(36px, 5vw, 56px);
-  color: var(--avo); line-height: 1; margin-bottom: 8px;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 400; line-height: 1.15;
+  color: var(--ink); margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+.product-format {
+  font-size: 14px; color: var(--muted);
+  letter-spacing: 0.04em; margin: 0 0 24px;
+}
+.product-numbers {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px 32px;
+  margin-top: 8px;
+}
+.pn-item { }
+.pn-value {
+  font-family: var(--serif);
+  font-size: 32px; line-height: 1;
+  color: var(--avo); margin-bottom: 4px;
   font-weight: 400; letter-spacing: -0.02em;
 }
-.number-unit { font-size: 14px; color: var(--muted); margin-bottom: 6px; }
-.number-label { font-size: 13px; color: var(--ink-2); line-height: 1.4; }
-@media (max-width: 720px) {
-  .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-}
+.pn-value .small { font-size: .55em; }
+.pn-label { font-size: 12px; color: var(--ink-2); }
 
-/* ===== Certifications ===== */
-.certs {
+.product-certs {
   background: var(--avo);
-  color: rgba(255,255,255,.92);
-  padding: 56px 28px;
+  color: #fff;
+  padding: 48px 40px;
+  border-radius: 6px;
   text-align: center;
 }
-.certs-row {
-  display: flex; gap: 56px; justify-content: center; align-items: center; flex-wrap: wrap;
+.product-certs-eyebrow {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(255,255,255,.6); margin-bottom: 22px;
 }
-.cert-item {
-  font-family: var(--serif); font-size: 18px; letter-spacing: 0.04em;
-  color: #fff;
+.product-certs-row {
+  display: flex; justify-content: space-around; gap: 24px;
+  font-family: var(--serif);
+  margin-bottom: 32px;
 }
-.cert-item .label {
-  display: block; font-family: var(--sans); font-size: 11px;
-  text-transform: uppercase; letter-spacing: 0.16em;
-  color: rgba(255,255,255,.55); margin-top: 4px; font-weight: 400;
+.product-certs-row .cert {
+  font-size: 18px; letter-spacing: 0.04em;
 }
-@media (max-width: 720px) {
-  .certs-row { gap: 28px; }
-  .cert-item { font-size: 16px; }
+.product-certs-row .cert .label {
+  display: block; font-family: var(--sans);
+  font-size: 9.5px; letter-spacing: 0.18em;
+  color: rgba(255,255,255,.5);
+  margin-top: 4px; font-weight: 500;
+}
+.product-certs-buy {
+  display: inline-block; background: #fff; color: var(--avo) !important;
+  padding: 11px 24px; border-radius: 4px;
+  font-weight: 500; font-size: 13px; letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: background .15s;
+}
+.product-certs-buy:hover { background: var(--bg-2); }
+
+@media (max-width: 860px) {
+  .product-strip-inner { grid-template-columns: 1fr; gap: 36px; padding: 60px 28px; }
+  .product-numbers { grid-template-columns: repeat(2, 1fr); gap: 18px; }
 }
 
-/* ===== Promise ===== */
+/* ===== Promise — single statement ===== */
 .promise {
-  background: var(--bg);
+  padding: 140px 32px;
   text-align: center;
+  background: var(--bg);
 }
 .promise-quote {
   font-family: var(--serif);
-  font-size: clamp(24px, 3.6vw, 36px);
-  line-height: 1.4; letter-spacing: -0.01em;
-  color: var(--ink); margin: 0 auto;
-  max-width: 720px; font-weight: 400;
-}
-.promise-quote .accent { color: var(--avo); font-style: italic; }
-.promise-attribution {
-  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--muted); margin-top: 24px;
-}
-
-/* ===== Heritage ===== */
-.heritage {
-  background: var(--sage-bg);
-  text-align: center;
-}
-.heritage-tagline {
-  font-family: var(--serif);
-  font-size: clamp(28px, 4.5vw, 48px);
-  line-height: 1.2; letter-spacing: 0.02em;
-  color: var(--avo-2); margin: 0 0 14px;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.25; letter-spacing: -0.01em;
+  color: var(--ink); max-width: 880px; margin: 0 auto;
   font-weight: 400;
 }
-.heritage-sub {
-  font-size: 15px; color: var(--ink-2); font-weight: 300;
-  max-width: 540px; margin: 0 auto 28px; line-height: 1.7;
+.promise-quote .accent { color: var(--avo); font-style: italic; }
+.promise-attr {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); margin-top: 36px;
 }
 
-/* ===== Lifestyle moments ===== */
-.moments-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
-  margin-top: 32px;
-}
-.moment-card {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 32px 28px;
+/* ===== Lineage — compact timeline ===== */
+.lineage {
+  background: var(--sage-bg);
+  padding: 120px 32px;
   text-align: center;
 }
-.moment-emoji {
-  font-size: 28px; margin-bottom: 12px; opacity: .75;
+.lineage-eyebrow {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--avo); font-weight: 600; margin-bottom: 16px;
 }
-.moment-title {
-  font-family: var(--serif); font-size: 20px;
-  margin: 0 0 8px; color: var(--ink);
+.lineage-title {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 400; line-height: 1.05;
+  color: var(--avo-2); margin: 0 0 16px;
+  letter-spacing: 0.01em;
 }
-.moment-text {
-  font-size: 14px; color: var(--ink-2); line-height: 1.6;
+.lineage-sub {
+  font-size: 16px; color: var(--ink-2); font-weight: 300;
+  max-width: 540px; margin: 0 auto 64px; line-height: 1.65;
+}
+.lineage-row {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0; max-width: 880px; margin: 0 auto; position: relative;
+}
+.lineage-row::before {
+  content: ""; position: absolute;
+  left: 14%; right: 14%; top: 18px; height: 1px;
+  background: var(--avo); opacity: .25;
+}
+.lineage-stop {
+  text-align: center; padding: 0 12px; position: relative;
+}
+.lineage-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--avo); margin: 12px auto 22px;
+  position: relative; z-index: 2;
+  box-shadow: 0 0 0 5px var(--sage-bg);
+}
+.lineage-year {
+  font-family: var(--serif); font-size: 28px;
+  color: var(--avo); margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+.lineage-name {
+  font-size: 14px; font-weight: 500; color: var(--ink);
+  margin-bottom: 6px; letter-spacing: 0.01em;
+}
+.lineage-desc {
+  font-size: 12.5px; color: var(--muted); line-height: 1.55;
+  max-width: 200px; margin: 0 auto;
 }
 @media (max-width: 720px) {
-  .moments-grid { grid-template-columns: 1fr; gap: 16px; }
+  .lineage-row { grid-template-columns: 1fr; gap: 36px; }
+  .lineage-row::before { display: none; }
 }
-
-/* ===== FAQ ===== */
-.faq-list { max-width: 760px; margin: 32px auto 0; }
-.faq-item {
-  border-top: 1px solid var(--line);
-  padding: 24px 0;
-}
-.faq-item:last-child { border-bottom: 1px solid var(--line); }
-.faq-q {
-  font-family: var(--serif); font-size: 19px; color: var(--ink);
-  margin: 0 0 10px; font-weight: 400;
-}
-.faq-a { font-size: 14px; color: var(--ink-2); line-height: 1.7; margin: 0; }
 
 /* ===== CTA strip ===== */
 .cta-strip {
   background: var(--avo);
   color: #fff;
-  padding: 80px 28px;
+  padding: 96px 32px;
   text-align: center;
 }
 .cta-strip h2 {
   font-family: var(--serif);
-  font-size: clamp(28px, 4vw, 42px); font-weight: 400;
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 400;
   margin: 0 0 16px; color: #fff;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.01em; line-height: 1.15;
 }
-.cta-strip p { font-size: 15px; color: rgba(255,255,255,.78); margin: 0 0 28px; font-weight: 300; }
+.cta-strip p { font-size: 15px; color: rgba(255,255,255,.78); margin: 0 0 32px; font-weight: 300; }
 .cta-strip .btn-light {
   display: inline-block; background: #fff; color: var(--avo) !important;
-  padding: 14px 32px; border-radius: 6px;
-  font-weight: 500; font-size: 14px; letter-spacing: 0.02em;
+  padding: 14px 34px; border-radius: 4px;
+  font-weight: 500; font-size: 14px; letter-spacing: 0.04em;
+  text-transform: uppercase;
   transition: background .15s;
 }
 .cta-strip .btn-light:hover { background: var(--bg-2); }
@@ -278,18 +294,18 @@ section { padding: 96px 28px; }
 .foot {
   background: #1a1a1a;
   color: rgba(255,255,255,.6);
-  padding: 60px 28px 36px;
+  padding: 64px 32px 36px;
   font-size: 12px; line-height: 1.7;
 }
-.foot-inner { max-width: 1100px; margin: 0 auto; }
+.foot-inner { max-width: 1200px; margin: 0 auto; }
 .foot-top {
-  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
   padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.12);
 }
-.foot-brand { font-family: var(--serif); font-size: 22px; color: #fff; margin-bottom: 8px; }
+.foot-brand { font-family: var(--serif); font-size: 24px; color: #fff; margin-bottom: 8px; letter-spacing: 0.04em; }
 .foot-tag { font-size: 12px; color: rgba(255,255,255,.5); font-style: italic; }
 .foot h5 {
-  font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em;
   color: rgba(255,255,255,.7); margin: 0 0 14px; font-weight: 600;
 }
 .foot ul { list-style: none; margin: 0; padding: 0; }
@@ -300,11 +316,10 @@ section { padding: 96px 28px; }
   padding-top: 32px;
   display: grid; grid-template-columns: 2fr 1fr; gap: 32px;
 }
-.foot-business { font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.8; }
+.foot-business { font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.85; }
 .foot-business strong { color: rgba(255,255,255,.65); font-weight: 500; }
 .foot-disclaimer {
   font-size: 10.5px; color: rgba(255,255,255,.4); line-height: 1.65;
-  padding-top: 16px;
 }
 .foot-copy {
   margin-top: 28px; padding-top: 20px;
@@ -330,134 +345,91 @@ section { padding: 96px 28px; }
   </div>
 </nav>
 
-<!-- ===== Hero ===== -->
+<!-- ===== Hero — Brand-forward ===== -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">All Vital Organics · Wild Greens</div>
-    <h1>오늘 채소,<br/>얼마나 드셨나요?</h1>
-    <p class="hero-sub">한 봉지에 담은 18가지 유기농 채소.<br/>1988년부터 농업의 정직함 위에서 만들어 왔습니다.</p>
-    <div class="hero-cta-wrap">
-      <a href="https://smartstore.naver.com/allvitalorganics" target="_blank" rel="noopener" class="btn-primary">스마트스토어에서 구매</a>
-      <a href="about.html" class="btn-secondary">브랜드 이야기</a>
-    </div>
+  <div class="hero-eyebrow">All Vital Organics</div>
+  <h1>Farm to body,<br/><span class="accent">Since 1988.</span></h1>
+  <p class="hero-sub">3대를 이어온 농업의 정직함.<br/>그 위에서 만드는 진짜 식재료, 한 봉지에.</p>
+  <div class="hero-cta">
+    <a href="https://smartstore.naver.com/allvitalorganics" target="_blank" rel="noopener" class="btn-primary">스마트스토어에서 구매</a>
+    <a href="about.html" class="btn-secondary">브랜드 이야기</a>
   </div>
 </section>
 
-<!-- ===== Numbers ===== -->
-<section class="numbers" id="product">
-  <div class="numbers-grid">
-    <div class="number-item">
-      <div class="number-value">95.2<span style="font-size:.6em;">%</span></div>
-      <div class="number-label">유기농 함량</div>
+<!-- ===== Product strip — alongside ===== -->
+<section class="product-strip">
+  <div class="product-strip-inner">
+    <div class="product-name-block">
+      <div class="product-line">Wild Greens · 와일드 그린즈</div>
+      <h2 class="product-name">AVO 샐러두유</h2>
+      <p class="product-format">190mL 파우치 · 일반식품</p>
+      <div class="product-numbers">
+        <div class="pn-item">
+          <div class="pn-value">95.2<span class="small">%</span></div>
+          <div class="pn-label">유기농 함량</div>
+        </div>
+        <div class="pn-item">
+          <div class="pn-value">18<span class="small">종</span></div>
+          <div class="pn-label">유기농 채소·곡물</div>
+        </div>
+        <div class="pn-item">
+          <div class="pn-value">5<span class="small">g</span></div>
+          <div class="pn-label">식물성 단백질</div>
+        </div>
+        <div class="pn-item">
+          <div class="pn-value">90<span class="small">mg</span></div>
+          <div class="pn-label">칼슘 함유</div>
+        </div>
+      </div>
     </div>
-    <div class="number-item">
-      <div class="number-value">18</div>
-      <div class="number-unit">종</div>
-      <div class="number-label">유기농 채소·곡물</div>
-    </div>
-    <div class="number-item">
-      <div class="number-value">5<span style="font-size:.6em;">g</span></div>
-      <div class="number-label">식물성 단백질</div>
-    </div>
-    <div class="number-item">
-      <div class="number-value">90<span style="font-size:.6em;">mg</span></div>
-      <div class="number-label">칼슘 함유</div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== Certifications ===== -->
-<section class="certs">
-  <div class="certs-row">
-    <div class="cert-item">HACCP<span class="label">인증</span></div>
-    <div class="cert-item">유기농<span class="label">인증</span></div>
-    <div class="cert-item">동물복지<span class="label">인증</span></div>
+    <div class="product-certs">
+      <div class="product-certs-eyebrow">3중 인증</div>
+      <div class="product-certs-row">
+        <div class="cert">HACCP<span class="label">인증</span></div>
+        <div class="cert">유기농<span class="label">인증</span></div>
+        <div class="cert">동물복지<span class="label">인증</span></div>
+      </div>
+      <a href="https://smartstore.naver.com/allvitalorganics" target="_blank" rel="noopener" class="product-certs-buy">스마트스토어에서 구매</a>
+    </div>
   </div>
 </section>
 
 <!-- ===== Promise ===== -->
 <section class="promise">
-  <div class="wrap-narrow">
-    <p class="promise-quote">
-      단 한 가지가 부족해도<br/>
-      <span class="accent">한 봉지가 안 됩니다.</span>
-    </p>
-    <p class="promise-attribution">— AVO 제조 원칙</p>
-  </div>
+  <p class="promise-quote">단 한 가지가 부족해도<br/><span class="accent">한 봉지가 안 됩니다.</span></p>
+  <p class="promise-attr">— AVO 제조 원칙</p>
 </section>
 
-<!-- ===== Heritage ===== -->
-<section class="heritage">
-  <div class="wrap-narrow">
-    <span class="section-eyebrow">우리의 뿌리</span>
-    <p class="heritage-tagline">Farm to body,<br/>Since 1988.</p>
-    <p class="heritage-sub">3대를 이어온 농업의 정직함.<br/>다움(1988)에서 시작해 대학두유의 양질한 제조공정을 거쳐, 오늘 AVO로 이어집니다.</p>
-    <a href="about.html" class="btn-secondary">브랜드 이야기 더 보기</a>
-  </div>
-</section>
+<!-- ===== Lineage ===== -->
+<section class="lineage">
+  <div class="lineage-eyebrow">우리의 뿌리</div>
+  <h2 class="lineage-title">3대를 이어온<br/>농업의 정직함.</h2>
+  <p class="lineage-sub">다움(1988)에서 시작해 대학두유의 제조공정을 거쳐, 오늘 AVO로 이어집니다.</p>
 
-<!-- ===== Lifestyle moments ===== -->
-<section>
-  <div class="wrap">
-    <div style="text-align:center; max-width: 600px; margin: 0 auto 40px;">
-      <span class="section-eyebrow">즐기는 법</span>
-      <h2 class="section-title">매일의 작은 순간에</h2>
-      <p class="section-sub" style="margin-left:auto; margin-right:auto;">바쁜 아침, 책상 위, 가방 속.<br/>채소가 부족한 하루의 어떤 순간이든 한 봉지면 충분합니다.</p>
+  <div class="lineage-row">
+    <div class="lineage-stop">
+      <div class="lineage-dot"></div>
+      <div class="lineage-year">1988</div>
+      <div class="lineage-name">다움 (Daoom)</div>
+      <div class="lineage-desc">국내 최초의 생식 브랜드. 식품의 정직함이 시작된 자리.</div>
     </div>
-    <div class="moments-grid">
-      <div class="moment-card">
-        <h3 class="moment-title">아침의 한 봉지</h3>
-        <p class="moment-text">출근 전, 등교 전. 끼니 챙기기 어려운 아침에 18가지 유기농 채소를 간편하게.</p>
-      </div>
-      <div class="moment-card">
-        <h3 class="moment-title">하루 사이의 균형</h3>
-        <p class="moment-text">점심 후 부족한 채소를 한 봉지로 가볍게 채워주세요. 맛있게, 정직하게.</p>
-      </div>
-      <div class="moment-card">
-        <h3 class="moment-title">진짜 한 끼의 여유</h3>
-        <p class="moment-text">가공하지 않은 진짜 채소와 콩으로 만든, 가족이 함께 즐길 수 있는 한 봉지.</p>
-      </div>
+    <div class="lineage-stop">
+      <div class="lineage-dot"></div>
+      <div class="lineage-year">2008</div>
+      <div class="lineage-name">대학두유</div>
+      <div class="lineage-desc">서울대 평창 캠퍼스 내 제조 시설. 농가와 함께.</div>
+    </div>
+    <div class="lineage-stop">
+      <div class="lineage-dot"></div>
+      <div class="lineage-year">2026</div>
+      <div class="lineage-name">AVO</div>
+      <div class="lineage-desc">3대째. 새로운 세대가 같은 정직함 위에.</div>
     </div>
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
-<section style="background: var(--bg-2);">
-  <div class="wrap-narrow">
-    <div style="text-align:center;">
-      <span class="section-eyebrow">자주 묻는 질문</span>
-      <h2 class="section-title">FAQ</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3 class="faq-q">AVO 샐러두유는 어떤 제품인가요?</h3>
-        <p class="faq-a">18종의 유기농 채소·곡물과 진짜 콩으로 만든 190mL 파우치 형태의 음료입니다. 가공하지 않은 진짜 식재료를 간편하게 즐길 수 있도록 설계한 일반식품입니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">건강기능식품인가요?</h3>
-        <p class="faq-a">아니요. AVO 샐러두유는 일반식품이며, 식품의약품안전처에서 기능성을 인정받은 건강기능식품이 아닙니다. 특정 질병의 예방·치료·진단을 목적으로 하지 않습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">어떻게 보관하나요?</h3>
-        <p class="faq-a">냉장 보관(0–10℃)을 권장하며 직사광선을 피해주세요. 개봉 후에는 가능한 빨리 음용해 주시기 바랍니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">알레르기 정보가 궁금합니다.</h3>
-        <p class="faq-a">대두 함유. 본 제품은 밀, 견과류 등을 함께 사용하는 시설에서 제조됩니다. 알레르기 체질이거나 우려가 있으신 경우 의료 전문가와 상담 후 섭취해 주세요.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">어디서 구매할 수 있나요?</h3>
-        <p class="faq-a">현재 네이버 스마트스토어를 통해 국내에서 판매 중입니다. 우측 상단의 <a href="https://smartstore.naver.com/allvitalorganics" target="_blank" rel="noopener">구매하기</a> 버튼을 통해 이동해 주세요.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">해외 배송이 가능한가요?</h3>
-        <p class="faq-a">현재는 국내 배송만 가능합니다. 해외 배송은 추후 안내드릴 예정입니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA strip ===== -->
+<!-- ===== CTA ===== -->
 <section class="cta-strip">
   <h2>오늘부터, 진짜 채소 한 봉지.</h2>
   <p>네이버 스마트스토어에서 만나보실 수 있습니다.</p>
